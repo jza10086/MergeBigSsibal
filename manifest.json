@@ -1,0 +1,60 @@
+{
+  "tags": [
+    "original",
+    "arcade",
+    "puzzle"
+  ],
+  "player_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "localization": {
+    "supported_locales": [
+      "zh_Hans",
+      "en"
+    ],
+    "fallback_locale": "zh_Hans",
+    "translations": {
+      "en": "i18n/en.po",
+      "zh_Hans": "i18n/zh_Hans.po"
+    }
+  },
+  "manifest_version": 2,
+  "id": "godot_party_default_merge_big_ssibal",
+  "package_version": "1.0.0",
+  "dependencies": {
+    "godot_party_default_protocol": "1.0.0"
+  },
+  "controls": {
+    "merge_drop": "落球"
+  },
+  "entry": "game.tscn",
+  "kind": "minigame",
+  "adapters": [
+    {
+      "protocol": {
+        "api_major": 1,
+        "min_api_minor": 0,
+        "id": "godot_party_default_protocol"
+      },
+      "entry": "adapter.gd",
+      "id": "standard"
+    }
+  ],
+  "config_schema": "settings.gd",
+  "introduction": "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。",
+  "name": "合成大西八",
+  "streams": {
+    "state": {
+      "audience": "instance",
+      "mode": "reliable"
+    }
+  },
+  "core_api_major": 4
+}

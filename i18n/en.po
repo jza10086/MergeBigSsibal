@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "合成大西八"
+msgstr "MergeBigSsibal"
+
+msgid "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。"
+msgstr "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。"
+
+msgid "比赛时限（秒）"
+msgstr "比赛时限（秒）"
+
+msgid "落球"
+msgstr "落球"
+
+msgid "游戏规则"
+msgstr "游戏规则"
+
+msgid "操作"
+msgstr "操作"
