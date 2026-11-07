@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://m78f1gmg22y4"]
+
+[ext_resource type="Script" uid="uid://dbrx5fkobm6tb" path="res://games/minigame/godot_party_default_merge_big_ssibal/bin_view.gd" id="1_6vhk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1lir"]
+bg_color = Color(0.102, 0.176, 0.227, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.329, 0.439, 0.502, 1)
+
+[node name="BinView" type="Panel" unique_id=660789002]
+offset_right = 592.0
+offset_bottom = 900.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1lir")
+script = ExtResource("1_6vhk3")
+
+[node name="Caption" type="Label" parent="." unique_id=1021126292]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = -38.0
+offset_right = 570.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 24
+text = "玩家 · 0"
+
+[node name="Warning" type="Label" parent="." unique_id=444171061]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 18.0
+offset_top = 150.0
+offset_right = 570.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 26
+text = "即将溢出 2.0"

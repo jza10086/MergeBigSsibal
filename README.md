@@ -6,4 +6,6 @@ Aim with the mouse and drop with left click or Space (rebindable). Matching circ
 
 A ball remaining above the red line for two seconds ends that player's run, with 1.4 seconds of grace for newly dropped balls. Drops have a 0.55-second cooldown. All bins ending or the room time limit (default 180 seconds) ends the round. Scores determine ranking, ties share ranks, and disconnected participants withdraw. Esc opens the framework menu; the round continues. Loading and settlement use the protocol's shared pages.
 
-All circles are plain colors; no external art is included. English catalog name: MergeBigSsibal; gameplay UI currently uses Chinese.
+All circles are plain colors; no external art is included. The package provides Chinese and English gameplay text. Shared protocol pages follow the protocol's own localization.
+
+The editable arena is in arena_view.tscn; bin_view.tscn is the shared skin for the main and opponent bins. The scene owns the frame, labels and evolution legend. Scripts render only live balls, aim and warning state. merge_world.gd remains the host simulation. Shared round lifecycle changes (architecture checklist G01) remain a separate protocol task.

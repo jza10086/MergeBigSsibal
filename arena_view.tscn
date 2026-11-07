@@ -1,0 +1,213 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="arena_view.gd" id="script"]
+[ext_resource type="PackedScene" path="bin_view.tscn" id="bin"]
+
+[sub_resource type="StyleBoxFlat" id="Tier0"]
+bg_color = Color(0.9372549019607843, 0.4, 0.5176470588235295, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier1"]
+bg_color = Color(0.6980392156862745, 0.5215686274509804, 0.9254901960784314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier2"]
+bg_color = Color(0.4823529411764706, 0.5529411764705883, 0.9372549019607843, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier3"]
+bg_color = Color(0.34901960784313724, 0.7411764705882353, 0.9098039215686274, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier4"]
+bg_color = Color(0.34509803921568627, 0.8392156862745098, 0.7529411764705882, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier5"]
+bg_color = Color(0.6078431372549019, 0.8274509803921568, 0.4196078431372549, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier6"]
+bg_color = Color(0.9019607843137255, 0.8431372549019608, 0.403921568627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier7"]
+bg_color = Color(0.9372549019607843, 0.6392156862745098, 0.3215686274509804, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier8"]
+bg_color = Color(0.9372549019607843, 0.4745098039215686, 0.3176470588235294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier9"]
+bg_color = Color(0.8705882352941177, 0.34901960784313724, 0.5215686274509804, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="Tier10"]
+bg_color = Color(0.3254901960784314, 0.7725490196078432, 0.5450980392156862, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[node name="Arena" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.063, 0.110, 0.153, 1)
+show_behind_parent = true
+
+[node name="MainBin" parent="." instance=ExtResource("bin")]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.0526
+offset_top = -435.0
+offset_right = 296.0526
+offset_bottom = 465.0
+
+[node name="NextTitle" type="Label" parent="."]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 324.0
+offset_top = -424.0
+offset_right = 520.0
+offset_bottom = -390.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+text = "下一球"
+
+[node name="Opponents" type="Control" parent="."]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Evolution" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -53.0
+offset_right = 237.0
+offset_bottom = -19.0
+theme_override_constants/separation = 10
+mouse_filter = 2
+
+[node name="Tier1" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(18, 18)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier0")
+
+[node name="Tier2" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(19.4, 19.4)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier1")
+
+[node name="Tier3" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(20.8, 20.8)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier2")
+
+[node name="Tier4" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(22.2, 22.2)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier3")
+
+[node name="Tier5" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(23.6, 23.6)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier4")
+
+[node name="Tier6" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(25, 25)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier5")
+
+[node name="Tier7" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(26.4, 26.4)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier6")
+
+[node name="Tier8" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(27.799999999999997, 27.799999999999997)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier7")
+
+[node name="Tier9" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(29.2, 29.2)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier8")
+
+[node name="Tier10" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(30.6, 30.6)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier9")
+
+[node name="Tier11" type="Panel" parent="Evolution"]
+custom_minimum_size = Vector2(32, 32)
+size_flags_vertical = 4
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Tier10")

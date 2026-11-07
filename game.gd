@@ -10,8 +10,8 @@ var aim: float = 250.0
 
 func build_game() -> void:
 	heading.text = api.i18n.text(&"合成大西八")
-	footer.text = "鼠标移动瞄准 · %s 落球 · Esc 菜单" % api.input.binding_text(&"merge_drop")
-	arena.font = api.load_asset({"package_id": "godot_party_default_protocol", "resource_key": "font_sans"}) as Font
+	footer.text = api.i18n.text(&"merge.controls", {"drop": api.input.binding_text(&"merge_drop")})
+	arena.configure(api.i18n.text, api.load_asset({"package_id": "godot_party_default_protocol", "resource_key": "font_sans"}) as Font)
 	for player: Dictionary in players:
 		arena.names[player.player_id] = player.name
 	arena.focus_id = local_id if not local_id.is_empty() else players[0].player_id
@@ -63,10 +63,11 @@ func make_snapshot() -> Dictionary:
 func render_game() -> void:
 	if view.is_empty():
 		return
-	arena.snapshot = view
-	status.text = "剩余 %03d 秒" % maxi(0, ceili(view.duration - view.time))
+	arena.accept(view)
+	status.text = api.i18n.text(&"merge.time", {"seconds": "%03d" % maxi(0, ceili(view.duration - view.time))})
 	for id: String in view.boards:
-		update_standing(id, "%s  %d 分%s" % [player_name(id), view.boards[id].score, " · 已结束" if view.boards[id].over else ""])
+		var key: StringName = &"merge.standing_ended" if view.boards[id].over else &"merge.standing"
+		update_standing(id, api.i18n.text(key, {"name": player_name(id), "score": view.boards[id].score}))
 	arena.queue_redraw()
 
 func player_left(id: String) -> void:

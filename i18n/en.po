@@ -7,16 +7,40 @@ msgid "合成大西八"
 msgstr "MergeBigSsibal"
 
 msgid "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。"
-msgstr "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。"
+msgstr "1–8 players merge balls in separate bins. Aim with the mouse; click or press Space to drop. Matching tiers merge and score points. Staying above the red line for 2 seconds ends your run, with a grace period for new balls. The default limit is 3 minutes. Rank by score when time runs out or all bins end. Eleven plain-color tiers; the largest stays in the bin."
 
 msgid "比赛时限（秒）"
-msgstr "比赛时限（秒）"
+msgstr "Time limit (seconds)"
 
 msgid "落球"
-msgstr "落球"
+msgstr "Drop"
 
 msgid "游戏规则"
-msgstr "游戏规则"
+msgstr "Rules"
 
 msgid "操作"
-msgstr "操作"
+msgstr "Controls"
+
+msgid "merge.controls"
+msgstr "Mouse to aim · {drop} to drop · Esc menu"
+
+msgid "merge.time"
+msgstr "{seconds} seconds left"
+
+msgid "merge.standing"
+msgstr "{name}  {score} points"
+
+msgid "merge.standing_ended"
+msgstr "{name}  {score} points · Finished"
+
+msgid "merge.bin"
+msgstr "{name} · {score}"
+
+msgid "merge.bin_ended"
+msgstr "{name} · {score}  Finished"
+
+msgid "merge.next"
+msgstr "Next ball"
+
+msgid "merge.overflow"
+msgstr "Overflow in {seconds}"

@@ -20,3 +20,27 @@ msgstr "游戏规则"
 
 msgid "操作"
 msgstr "操作"
+
+msgid "merge.controls"
+msgstr "鼠标移动瞄准 · {drop} 落球 · Esc 菜单"
+
+msgid "merge.time"
+msgstr "剩余 {seconds} 秒"
+
+msgid "merge.standing"
+msgstr "{name}  {score} 分"
+
+msgid "merge.standing_ended"
+msgstr "{name}  {score} 分 · 已结束"
+
+msgid "merge.bin"
+msgstr "{name} · {score}"
+
+msgid "merge.bin_ended"
+msgstr "{name} · {score}  已结束"
+
+msgid "merge.next"
+msgstr "下一球"
+
+msgid "merge.overflow"
+msgstr "即将溢出 {seconds}"
