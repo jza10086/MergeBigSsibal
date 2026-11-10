@@ -1,7 +1,7 @@
 ## Standard ranked round: host simulation, participant-only logical drops, shared round pages.
 extends "res://games/protocols/godot_party_default_protocol/ranked_round.gd"
-const World: Script = preload("res://games/minigame/godot_party_default_merge_big_ssibal/merge_world.gd")
-const Arena: Script = preload("res://games/minigame/godot_party_default_merge_big_ssibal/arena_view.gd")
+const World: Script = preload("res://games/minigame/gp_merge_ssibal/merge_world.gd")
+const Arena: Script = preload("res://games/minigame/gp_merge_ssibal/arena_view.gd")
 var world: World = World.new()
 var accumulator: float = 0.0
 var network_clock: float = 0.0

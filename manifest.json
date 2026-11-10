@@ -26,8 +26,8 @@
     }
   },
   "manifest_version": 2,
-  "id": "godot_party_default_merge_big_ssibal",
-  "package_version": "1.0.7",
+  "id": "gp_merge_ssibal",
+  "package_version": "1.0.8",
   "dependencies": {
     "godot_party_default_protocol": "1.0.7"
   },

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://m78f1gmg22y4"]
 
-[ext_resource type="Script" uid="uid://dbrx5fkobm6tb" path="res://games/minigame/godot_party_default_merge_big_ssibal/bin_view.gd" id="1_6vhk3"]
+[ext_resource type="Script" uid="uid://dbrx5fkobm6tb" path="res://games/minigame/gp_merge_ssibal/bin_view.gd" id="1_6vhk3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1lir"]
 bg_color = Color(0.102, 0.176, 0.227, 1)
