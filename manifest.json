@@ -27,9 +27,9 @@
   },
   "manifest_version": 2,
   "id": "godot_party_default_merge_big_ssibal",
-  "package_version": "1.0.4",
+  "package_version": "1.0.6",
   "dependencies": {
-    "godot_party_default_protocol": "1.0.4"
+    "godot_party_default_protocol": "1.0.6"
   },
   "controls": {
     "merge_drop": "落球"
@@ -50,11 +50,5 @@
   "config_schema": "settings.gd",
   "introduction": "1–8 人独立落球合成。鼠标瞄准，点击或空格落球；同级圆球相碰合成更大一级并得分。越过红线持续 2 秒结束，落球有入场宽限。默认 3 分钟，全部结束或到时按分数排名。11 级纯色占位，最高级保留在容器中。",
   "name": "合成大西八",
-  "streams": {
-    "state": {
-      "audience": "instance",
-      "mode": "reliable"
-    }
-  },
-  "core_api_major": 4
+  "core_api_major": 5
 }

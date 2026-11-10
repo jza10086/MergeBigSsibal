@@ -7,10 +7,12 @@ const LIMIT: float = 100.0
 const STEP: float = 1.0 / 60.0
 var boards: Dictionary = {}
 var time: float = 0.0
+var next_ball_id: int = 0
 var duration: float = 180.0
 
 func reset(ids: Array[String], seed_value: int, seconds: float) -> void:
 	boards.clear()
+	next_ball_id = 0
 	time = 0.0
 	duration = seconds
 	for id: String in ids:
@@ -25,7 +27,8 @@ func drop(id: String, x: float) -> void:
 		return
 	var level: int = board.next
 	var radius: float = RADII[level]
-	board.balls.append({"x": clampf(x, radius, WIDTH - radius), "y": 42.0, "vx": 0.0, "vy": 0.0, "level": level, "age": 0.0})
+	next_ball_id += 1
+	board.balls.append({"id": next_ball_id, "x": clampf(x, radius, WIDTH - radius), "y": 42.0, "vx": 0.0, "vy": 0.0, "level": level, "age": 0.0})
 	board.cooldown = 0.55
 	board.next = board.following
 	board.following = board.rng.randi_range(0, 4)
@@ -74,7 +77,8 @@ func _solve(board: Dictionary) -> void:
 				var level: int = a.level + 1
 				removed[i] = true
 				removed[j] = true
-				created.append({"x": (a.x + b.x) * 0.5, "y": (a.y + b.y) * 0.5,
+				next_ball_id += 1
+				created.append({"id": next_ball_id, "x": (a.x + b.x) * 0.5, "y": (a.y + b.y) * 0.5,
 					"vx": (a.vx + b.vx) * 0.5, "vy": (a.vy + b.vy) * 0.5, "level": level, "age": minf(a.age, b.age)})
 				board.score += (level + 1) * (level + 2) / 2
 				board.best = maxi(board.best, level)
