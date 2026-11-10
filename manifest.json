@@ -27,15 +27,16 @@
   },
   "manifest_version": 2,
   "id": "godot_party_default_merge_big_ssibal",
-  "package_version": "1.0.6",
+  "package_version": "1.0.7",
   "dependencies": {
-    "godot_party_default_protocol": "1.0.6"
+    "godot_party_default_protocol": "1.0.7"
   },
   "controls": {
     "merge_drop": "落球"
   },
   "entry": "game.tscn",
   "kind": "minigame",
+  "supported_systems": ["windows"],
   "adapters": [
     {
       "protocol": {
