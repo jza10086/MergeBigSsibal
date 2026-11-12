@@ -27,9 +27,9 @@
   },
   "manifest_version": 2,
   "id": "gp_merge_ssibal",
-  "package_version": "1.0.11",
+  "package_version": "1.0.12",
   "dependencies": {
-    "godot_party_default_protocol": "1.0.10"
+    "godot_party_default_protocol": "1.0.11"
   },
   "controls": {
     "merge_drop": "落球"

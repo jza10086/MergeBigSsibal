@@ -1,10 +1,13 @@
 [gd_scene format=3]
 
+[ext_resource type="PackedScene" path="res://games/minigame/gp_merge_ssibal/ui/round_pages.tscn" id="protocol_pages"]
+
 [ext_resource type="PackedScene" path="res://games/protocols/godot_party_default_protocol/ranked_round.tscn" id="base"]
 [ext_resource type="Script" path="res://games/minigame/gp_merge_ssibal/game.gd" id="game"]
 [ext_resource type="PackedScene" path="arena_view.tscn" id="arena"]
 
-[node name="MergeBigSsibal" instance=ExtResource("base")]
+[node name="MergeBigSsibal" instance=ExtResource("base") node_paths=PackedStringArray("pages")]
+pages = NodePath("ProtocolPages")
 script = ExtResource("game")
 
 [node name="Arena" parent="GameCanvas/Stage" index="0" instance=ExtResource("arena")]
@@ -12,3 +15,6 @@ unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+
+[node name="ProtocolPages" parent="." instance=ExtResource("protocol_pages")]
+unique_name_in_owner = true
