@@ -1,5 +1,10 @@
 ## Standard ranked round: host simulation, participant-only logical drops, shared round pages.
 extends "res://games/protocols/godot_party_default_protocol/ranked_round.gd"
+
+## Content-owned gameplay rules, independent of package compatibility.
+static func party_definition() -> Dictionary:
+	return {"player_counts": [1, 2, 3, 4, 5, 6, 7, 8], "tags": ["original", "arcade", "puzzle"], "controls": {"merge_drop": "落球"}}
+
 const World: Script = preload("res://games/minigame/gp_merge_ssibal/merge_world.gd")
 const Arena: Script = preload("res://games/minigame/gp_merge_ssibal/arena_view.gd")
 var world: World = World.new()
