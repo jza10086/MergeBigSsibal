@@ -21,7 +21,7 @@ var aim: float = 250.0
 func build_game() -> void:
 	heading.text = api.i18n.text(&"合成大西八")
 	footer.text = api.i18n.text(&"merge.controls", {"drop": api.input.binding_text(&"merge_drop")})
-	arena.configure(api.i18n.text, api.load_asset({"package_id": "godot_party_default_protocol", "resource_key": "font_sans"}) as Font)
+	arena.configure(api.i18n.text, preload("res://games/assets/godot_party_default_ui/fonts/NotoSansSC-UI.otf"))
 	for player: Dictionary in players:
 		arena.names[player.player_id] = player.name
 	arena.focus_id = local_id if not local_id.is_empty() else players[0].player_id
