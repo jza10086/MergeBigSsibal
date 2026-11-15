@@ -44,3 +44,6 @@ msgstr "下一球"
 
 msgid "merge.overflow"
 msgstr "即将溢出 {seconds}"
+
+msgid "package.name"
+msgstr "合成大西八"

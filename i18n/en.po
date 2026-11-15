@@ -44,3 +44,6 @@ msgstr "Next ball"
 
 msgid "merge.overflow"
 msgstr "Overflow in {seconds}"
+
+msgid "package.name"
+msgstr "MergeBigSsibal"

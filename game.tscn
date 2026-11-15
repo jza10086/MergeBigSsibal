@@ -1,9 +1,9 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" path="res://games/minigame/gp_merge_ssibal/ui/round_pages.tscn" id="protocol_pages"]
+[ext_resource type="PackedScene" path="res://games/minigame/GP_merge_ssibal/ui/round_pages.tscn" id="protocol_pages"]
 
-[ext_resource type="PackedScene" path="res://games/protocols/godot_party_default_protocol/ranked_round.tscn" id="base"]
-[ext_resource type="Script" path="res://games/minigame/gp_merge_ssibal/game.gd" id="game"]
+[ext_resource type="PackedScene" path="res://games/protocols/GP_default_protocol/ranked_round.tscn" id="base"]
+[ext_resource type="Script" path="res://games/minigame/GP_merge_ssibal/game.gd" id="game"]
 [ext_resource type="PackedScene" path="arena_view.tscn" id="arena"]
 
 [node name="MergeBigSsibal" instance=ExtResource("base") node_paths=PackedStringArray("pages")]

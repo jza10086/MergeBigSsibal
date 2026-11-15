@@ -1,8 +1,8 @@
 ## Standard ranked round: host simulation, participant-only logical drops, shared round pages.
-extends "res://games/protocols/godot_party_default_protocol/ranked_round.gd"
+extends "res://games/protocols/GP_default_protocol/ranked_round.gd"
 
-const World: Script = preload("res://games/minigame/gp_merge_ssibal/merge_world.gd")
-const Arena: Script = preload("res://games/minigame/gp_merge_ssibal/arena_view.gd")
+const World: Script = preload("res://games/minigame/GP_merge_ssibal/merge_world.gd")
+const Arena: Script = preload("res://games/minigame/GP_merge_ssibal/arena_view.gd")
 var world: World = World.new()
 var accumulator: float = 0.0
 var network_clock: float = 0.0
@@ -22,7 +22,7 @@ var aim: float = 250.0
 func build_game() -> void:
 	heading.text = api.i18n.text(&"合成大西八")
 	footer.text = api.i18n.text(&"merge.controls", {"drop": api.input.binding_text(&"merge_drop")})
-	arena.configure(api.i18n.text, preload("res://games/assets/godot_party_default_ui/fonts/NotoSansSC-UI.otf"))
+	arena.configure(api.i18n.text, preload("res://games/assets/GP_default_ui/fonts/NotoSansSC-UI.otf"))
 	for player: Dictionary in players:
 		arena.names[player.player_id] = player.name
 	arena.focus_id = local_id if not local_id.is_empty() else players[0].player_id
